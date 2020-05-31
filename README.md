@@ -15,6 +15,9 @@ To install all the required package, run the following in the project directory
 ### Run
 Once all the packages are successfully installed run the following to start the meteor app
 ```meteor```
+the app by default runs on port ```3000```
+you can open the application in your browser at
+```http://localhost:3000/#```
 
 ### Features
 - nodeJs as backend
