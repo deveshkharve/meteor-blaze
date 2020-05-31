@@ -1,0 +1,30 @@
+<body>
+  <div class="container">
+    {{> loginButtons}}
+    <header>
+      <h1>Todo List</h1>
+      {{> task_form}}
+    </header>
+    
+    <br/>
+    {{#if currentUser}}
+    <label class="hide-completed">
+      <input class="accept" type="checkbox" />
+      Hide Completed Tasks
+    </label>
+    <ul>
+      {{#each tasks}}
+      {{> task}}
+      {{/each}}
+    </ul>
+    {{/if}}
+  </div>
+</body>
+
+<template name="task_form">
+  {{#if currentUser}}
+  <form class="new-task">
+    <input type="text" name="text" placeholder="Type to add new tasks" />
+  </form>
+  {{/if}}
+</template>
